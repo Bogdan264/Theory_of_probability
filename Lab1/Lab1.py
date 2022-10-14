@@ -23,8 +23,8 @@ def CreateDifference(liststandart):
     i: int = 0
     while i < len(liststandart):
         if max > liststandart[i]:
-            counter +=1
-            i+=1
+            counter += 1
+            i += 1
         else:
             if counter > 0:
                 for j in range(counter):
@@ -44,8 +44,9 @@ def CreateTable10(list):
     for i in list:
         cumulative += i[1]
         print(f"{i[0]}\t\t\t{i[1]}\t\t\t{cumulative}")
+        s.save(str(len(list)) + ".txt", f"Number: {i[0]}\t\tAmount: {i[1]}\t\tCumulative: {cumulative}\n")
 
-def Task2(list, default):
+def Moda(list, default):
     print("Moda:")
     max: int = 1
     for j in list:
@@ -55,24 +56,26 @@ def Task2(list, default):
         if (max == j[1]):
             print(f"Element: {j[0]}     Frequency: {max}")
 
-    #Mediana
-    if (len(default) % 2 == 0):
-        mid = int(len(default) / 2)
-        x = (abs(default[mid-1] + default[mid]) / 2)
-        print(f"Mediana: {x}")
-    else:
-        mid = int(len(default) / 2)
-        x = default[mid]
-        print(f"Mediana: {x}")
-
-    for i in list:
-        s.save(str(len(list)) + ".txt", f"Number: {i[0]}\t\tAmount: {i[1]}\n")
+    #for i in list:
+    #    s.save(str(len(list)) + ".txt", f"Number: {i[0]}\t\tAmount: {i[1]}\t\tCumulative: {cumulative}\n")
 
 
     #Save moda and mediana
     for j in list:
         if (max == j[1]):
             s.save(str(len(list)) + ".txt", f"Moda: {j[0]}\t\tFrequncy: {max}\n")
+
+
+def Mediana(list,default):
+    # Mediana
+    if (len(default) % 2 == 0):
+        mid = int(len(default) / 2)
+        x = (abs(default[mid - 1] + default[mid]) / 2)
+        print(f"Mediana: {x}")
+    else:
+        mid = int(len(default) / 2)
+        x = default[mid]
+        print(f"Mediana: {x}")
     s.save(str(len(list)) + ".txt", f"Mediana: {x}\n")
 
 
@@ -83,7 +86,7 @@ def Upside(list, average):
     return up
 
 
-def Task3(list):
+def Dispercian_AverageSquare(list):
     up = 0
     for i in list:
         up += i[0] * i[1]
@@ -125,7 +128,7 @@ def Frequency(list, freq):
     return freq
 
 
-def Task4(list):
+def Build_histagram(list):
     plt.hist(list, bins = 200)
     plt.ylabel("Frequency")
     plt.xlabel("Amount")
@@ -165,26 +168,29 @@ for i in range(2):
 
 
 CreateTable10(freq10)
-CreateTable10(freq100)
-CreateTable10(freq1000)
+#CreateTable10(freq100)
+#CreateTable10(freq1000)
 print("\n\n\n")
 
 
 print("\t\tFor 10 elements")
-Task2(freq10, list10)
+Moda(freq10, list10)
+Mediana(freq10, list10)
 print("\n\t\tFor 100 elements")
-Task2(freq100, list100)
+Moda(freq100, list100)
+Mediana(freq100, list100)
 print("\n\t\tFor 1000 elements")
-Task2(freq1000, list1000)
+Moda(freq1000, list1000)
+Mediana(freq1000, list1000)
 
 
 print("\n\n\t\tFor 10 elements")
-Task3(freq10)
+Dispercian_AverageSquare(freq10)
 print("\t\tFor 100 elements")
-Task3(freq100)
+Dispercian_AverageSquare(freq100)
 print("\t\tFor 1000 elements")
-Task3(freq1000)
+Dispercian_AverageSquare(freq1000)
 
-Task4(list10)
-Task4(list100)
-Task4(list1000)
+Build_histagram(list10)
+Build_histagram(list100)
+Build_histagram(list1000)
