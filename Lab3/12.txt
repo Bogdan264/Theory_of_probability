@@ -1,0 +1,32 @@
+x:	19.0		y:	2.4
+x:	12.0		y:	1.5
+x:	82.0		y:	7.6
+x:	32.0		y:	3.8
+x:	34.0		y:	2.8
+x:	40.0		y:	4.6
+x:	30.0		y:	4.1
+x:	43.0		y:	5.4
+x:	45.0		y:	3.9
+x:	29.0		y:	2.6
+x:	28.0		y:	4.4
+x:	26.0		y:	3.6
+Center is:	[35.0, 3.892]
+Covariation:	22.781
+Koeficient:	0.074
+Regression line:	y = 0.074 * x + 1.302
+			New Y:
+x:	19.0		y:	2.708
+x:	12.0		y:	2.19
+x:	82.0		y:	7.37
+x:	32.0		y:	3.67
+x:	34.0		y:	3.818
+x:	40.0		y:	4.262
+x:	30.0		y:	3.522
+x:	43.0		y:	4.484
+x:	45.0		y:	4.632
+x:	29.0		y:	3.448
+x:	28.0		y:	3.374
+x:	26.0		y:	3.226
+Corelation koeficient:	0.818
+Trend conclusion:	Trend is positive
+Conclusion:	Line almost on points and growing
