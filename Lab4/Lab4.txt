@@ -1,0 +1,10 @@
+Task 1:		0.34
+Task 2:		0.822
+Task 3:		0.533
+Task 4:		0.3
+Task 5:		0.443
+Task 6:		0.72
+Task 7:	excellent student:	0.579	bad student:	0.002
+Task 8:		0.93
+Task 9:		0.268
+Task 10:		0.675
